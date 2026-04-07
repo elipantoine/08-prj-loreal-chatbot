@@ -14,14 +14,16 @@ export default {
       return new Response(null, { headers: corsHeaders });
     }
 
-    const apiKey = env.OPENAI_API_KEY; // Make sure to name your secret OPENAI_API_KEY in the Cloudflare Workers dashboard
+    const apiKey = env.OPENAI_APIKEY; // Make sure to name your secret OPENAI_API_KEY in the Cloudflare Workers dashboard
     const apiUrl = 'https://api.openai.com/v1/chat/completions';
     const userInput = await request.json();
 
     const requestBody = {
       model: 'gpt-4o',
       messages: userInput.messages,
-      max_completion_tokens: 300,
+      max_completion_tokens: 250,
+      temperature: 0.5,
+      frequency_penalty: 1,
     };
 
     const response = await fetch(apiUrl, {

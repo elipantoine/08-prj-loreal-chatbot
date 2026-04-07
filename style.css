@@ -7,10 +7,11 @@
 
 /* —— body + fonts —— */
 body {
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-family: "Avant Garde Gothic ITC W02 Book";
   color: #333;
   display: flex;
   justify-content: center;
+
 }
 
 .page-wrapper {
@@ -21,7 +22,7 @@ body {
 /* header */
 .site-header {
   text-align: center;
-  padding-top: 50px;
+    padding-top: 50px;
 }
 
 .site-title {
@@ -50,6 +51,7 @@ body {
 .msg {
   margin-bottom: 14px;
   line-height: 1.5;
+  font-family: sans-serif;
 }
 
 .msg.user {
